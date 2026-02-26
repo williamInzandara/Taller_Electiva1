@@ -1,0 +1,238 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+
+/* =============================
+   VARIABLES Y CONFIGURACIÓN
+============================= */
+
+:root {
+    --primary: #4f46e5;
+    --dark: #111827;
+    --light: #f9fafb;
+    --gray: #6b7280;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* =============================
+   NAVBAR
+============================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+}
+
+/* =============================
+   HERO
+============================= */
+
+.hero {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.cta-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: white;
+    color: var(--primary);
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* =============================
+   BENEFICIOS
+============================= */
+
+.beneficios {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.beneficios-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.beneficio {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+/* =============================
+   CARACTERÍSTICAS
+============================= */
+
+.caracteristicas {
+    padding: 4rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+/* =============================
+   TESTIMONIOS
+============================= */
+
+.testimonios {
+    padding: 4rem 2rem;
+    background: var(--light);
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 1rem auto;
+    font-style: italic;
+}
+
+/* =============================
+   CONTACTO
+============================= */
+
+.contacto {
+    padding: 4rem 2rem;
+    background: var(--white);
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.btn-enviar {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn-enviar:hover {
+    opacity: 0.8;
+}
+
+/* =============================
+   FOOTER
+============================= */
+
+footer {
+    padding: 2rem;
+    background: var(--dark);
+    color: white;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.7;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+
+@media (min-width: 768px) {
+
+    .beneficios-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+}
